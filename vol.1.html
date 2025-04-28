@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>فوليوم</title>
+    <link rel="stylesheet" href="vol.1.css">
+</head>
+
+<body>
+    <div class="info-box">
+        <h1>☕ فوليوم</h1>
+        
+        <p><strong>📍 فروع:</strong> 
+            <a href="https://maps.app.goo.gl/2SGunvLSuT2Xsig8A" target="_blank" style="color: #00000068; text-decoration: none;"> برج مريم , مبارك الكبير  </a> | 
+            <a href="https://maps.app.goo.gl/2SGunvLSuT2Xsig8A" target="_blank" style="color: #00000068; text-decoration: none;"> شويخ الصناعيه  </a> 
+        
+        </p>        
+        <p><strong>📞 الهاتف:</strong> <a href="tel:920000000" style="color: #09090964; text-decoration: none;">60482221</a></p>
+        <p><strong>🔹 الوصف:</strong>  فوليوم يقدم القهوه والحلويات.</p>
+        <p><strong>🌍 الموقع:</strong> <a href="https://order.vol1official.com/8krmYvzrPD/welcome?fbclid=PAZXh0bgNhZW0CMTEAAadbeS28kCuljwv2ZHJwTZs3Qi3sBZRFBnUyYwayGVTOqxF4hizGLSlXumsvlQ_aem_rIB7C8VxVUsH032TLwLwGg" target="_blank">الموقع الرسمي فوليوم </a></p>
+        <a href="https://www.instagram.com/vol.1official/?hl=ar/" target="_blank" style="text-decoration: none;">
+            <i class="fab fa-instagram" style="font-size: 26px; color: #09090964;"></i>
+            <span style="font-size: 18px; color: #09090964; font-weight: bold; margin-right: 8px;">@vol.1official</span>
+        </a>
+
+        <h2>🗺️ موقع فوليوم على الخريطة</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.8693101982703!2d47.979740699999994!3d29.374115599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf84eae116f88d%3A0x410b6fed437d6d5d!2z2YHZiNmE2YrZiNmFIDE!5e0!3m2!1sar!2skw!4v1744543793848!5m2!1sar!2skw" 
+            allowfullscreen="" loading="lazy" ></iframe>      
+        </div>
+
+        <br>
+        <button onclick="goBack()" class="back-btn">⬅ العودة للقائمة</button>
+    </div>
+
+    <script>
+        // دالة العودة الأساسية
+        function goBack() {
+            window.location.href = "1.html";
+        }
+
+        // تأثيرات حركية عند النقر
+        document.addEventListener('DOMContentLoaded', function() {
+            const backBtn = document.querySelector('.back-btn');
+            
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                    goBack();
+                }, 200);
+            });
+
+
+            // تغيير لون الزر عند التمرير
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > 100) {
+                    backBtn.style.backgroundColor = '#5a0a6e';
+                } else {
+                    backBtn.style.backgroundColor = '#44085e';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

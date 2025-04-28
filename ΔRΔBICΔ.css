@@ -1,0 +1,83 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl;
+    background: url('https://b.top4top.io/p_33678qzed1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* تعتيم الخلفية */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* الصندوق المصغر */
+.info-box {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    width: 320px;         /* عرض أصغر */
+    height: 500px;        /* ارتفاع أصغر */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* العناوين */
+h1 {
+    color: #07081383;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* النصوص */
+p {
+    font-size: 13px;
+    color: #01020ad0;
+    margin: 5px 0;
+}
+
+/* الروابط */
+a {
+    color: #07081383;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* زر العودة */
+.back-btn {
+    display: block;              /* ضروري للتمركز */
+    margin: -20px auto 0 auto;    /* فوق: 10px، يمين ويسار: تلقائي */
+    padding: 10px 15px;
+    background-color: #07081383;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    width: auto;                 /* العرض تلقائي حسب المحتوى */
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+
+.back-btn:hover {
+    background-color: #0a0315;
+}

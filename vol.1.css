@@ -1,0 +1,82 @@
+    body {
+        font-family: 'Tajawal', sans-serif; /* الخط المستخدم */
+        direction: rtl; /* اتجاه النص من اليمين لليسار */
+        background: url('https://i.top4top.io/p_3388hssrb1.png') no-repeat center center fixed; /* صورة الخلفية */
+        background-size: cover; /* تغطية كاملة للشاشة */
+        display: flex; /* استخدام Flexbox للتمركز */
+        justify-content: center; /* توسيط أفقي */
+        align-items: center; /* توسيط عمودي */
+        height: 100vh; /* ارتفاع كامل الشاشة */
+        position: relative; /* ضروري لوضع التعتيم */
+    }
+    
+    /* تأثير تعتيم على الخلفية */
+    body::before {
+        content: "";
+        position: fixed; /* ثابت بالنسبة للشاشة */
+        top: 0;
+        left: 0;
+        width: 100vw; /* يغطي كامل العرض */
+        height: 100vh; /* يغطي كامل الطول */
+        background-color: rgba(0, 0, 0, 0.5); /* تعتيم 50% */
+        z-index: 0; /* خلف كل شيء */
+    }
+    
+    /* صندوق عرض المعلومات */
+    .info-box {
+        position: relative;
+        z-index: 1; /* فوق تأثير التعتيم */
+        background: rgba(255, 255, 255, 0.95); /* خلفية شبه شفافة */
+        padding: 20px; /* مسافة داخلية */
+        border-radius: 12px; /* زوايا دائرية */
+        text-align: center; /* توسيط النص */
+        max-width: 380px;    
+        height: 490px; /* ارتفاع ثابت */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.073); /* ظل ناعم */
+    }
+    
+    /* زر العودة */
+    .back-btn {
+        display: block;              /* ضروري للتمركز */
+        margin: -15px auto 0 auto;    /* فوق: 10px، يمين ويسار: تلقائي */
+        padding: 10px 15px;
+        background-color:  #09090964;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 16px;
+        width: auto;                 /* العرض تلقائي حسب المحتوى */
+        transition: 0.3s;
+        border: none;
+        cursor: pointer;
+    }
+    /* تأثير عند المرور على الزر */
+    .back-btn:hover {
+        background-color: #09090964; /* تغيير اللون عند التمرير */
+    }
+    
+    /* عنوان */
+    h1 {
+        color: #09090964; /* لون العنوان */
+        font-size: 22px; /* حجم الخط */
+        margin-bottom: 10px; /* مسافة تحت العنوان */
+    }
+    
+    /* الفقرة */
+    p {
+        font-size: 16px; /* حجم الخط */
+        color: #333; /* لون النص */
+        margin: 5px 0; /* مسافة فوق وتحت */
+    }
+    
+    /* الروابط */
+    a {
+        color: #09090964; /* لون الرابط */
+        text-decoration: none; /* إزالة الخط السفلي */
+        font-weight: bold; /* جعل الخط سميك */
+    }
+    
+    a:hover {
+        text-decoration: underline; /* إظهار خط عند التمرير */
+    }
+    

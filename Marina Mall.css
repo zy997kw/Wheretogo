@@ -1,0 +1,83 @@
+body {
+    font-family: 'Tajawal', sans-serif; /* الخط المستخدم */
+    direction: rtl; /* اتجاه النص من اليمين لليسار */
+    background: url('https://a.top4top.io/p_3367najhi1.jpg') no-repeat center center fixed; /* صورة الخلفية */
+    background-size: cover; /* تغطية كاملة للشاشة */
+    display: flex; /* استخدام Flexbox للتمركز */
+    justify-content: center; /* توسيط أفقي */
+    align-items: center; /* توسيط عمودي */
+    height: 100vh; /* ارتفاع كامل الشاشة */
+    position: relative; /* ضروري لوضع التعتيم */
+}
+
+/* تأثير تعتيم على الخلفية */
+body::before {
+    content: "";
+    position: fixed; /* ثابت بالنسبة للشاشة */
+    top: 0;
+    left: 0;
+    width: 100vw; /* يغطي كامل العرض */
+    height: 100vh; /* يغطي كامل الطول */
+    background-color: rgba(0, 0, 0, 0.5); /* تعتيم 50% */
+    z-index: 0; /* خلف كل شيء */
+}
+
+/* صندوق عرض المعلومات */
+.info-box {
+    position: relative;
+    z-index: 1; /* فوق تأثير التعتيم */
+    background: rgba(255, 255, 255, 0.95); /* خلفية شبه شفافة */
+    padding: 20px; /* مسافة داخلية */
+    border-radius: 12px; /* زوايا دائرية */
+    text-align: center; /* توسيط النص */
+    max-width: 350px;    
+    height: 500px; /* ارتفاع ثابت */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* ظل ناعم */
+}
+
+/* زر العودة */
+.back-btn {
+    display: block; /* عرض كامل للسطر */
+    background-color: #e7700e; /* لون الخلفية */
+    color: white; /* لون النص */
+    border: none; /* بدون إطار */
+    padding: 8px 16px; /* تصغير الزر */
+    border-radius: 8px; /* حواف دائرية */
+    margin-top: -10px;  /* رفع الزر قليلاً */
+    cursor: pointer; /* شكل المؤشر عند التمرير */
+    font-size: 16px; /* تصغير حجم الخط */
+    width: 100%; /* عرض كامل داخل الصندوق */
+    text-align: center; /* توسيط النص */
+    transition: 0.3s; /* تأثير التحوّل عند التمرير */
+    text-decoration: none; /* إزالة الخط السفلي */
+}
+
+/* تأثير عند المرور على الزر */
+.back-btn:hover {
+    background-color: #f5bb3e; /* تغيير اللون عند التمرير */
+}
+
+/* عنوان */
+h1 {
+    color: #e7700e; /* لون العنوان */
+    font-size: 22px; /* حجم الخط */
+    margin-bottom: 10px; /* مسافة تحت العنوان */
+}
+
+/* الفقرة */
+p {
+    font-size: 16px; /* حجم الخط */
+    color: #333; /* لون النص */
+    margin: 5px 0; /* مسافة فوق وتحت */
+}
+
+/* الروابط */
+a {
+    color: #e7700e; /* لون الرابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    font-weight: bold; /* جعل الخط سميك */
+}
+
+a:hover {
+    text-decoration: underline; /* إظهار خط عند التمرير */
+}

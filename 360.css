@@ -1,0 +1,84 @@
+/* خلفية الصفحة */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://d.top4top.io/p_3354b51dl1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* توسيط أفقياً */
+    align-items: center; /* توسيط عمودياً */
+    position: relative;
+}
+
+/* تأثير تعتيم على الخلفية */
+body::before {
+    content: "";
+    position: fixed; /* ثابت بالنسبة للشاشة */
+    top: 0;
+    left: 0;
+    width: 100vw; /* يغطي كامل العرض */
+    height: 100vh; /* يغطي كامل الطول */
+    background-color: rgba(0, 0, 0, 0.5); /* تعتيم 50% */
+    z-index: 0; /* خلف كل شيء */
+}
+
+/* صندوق عرض المعلومات */
+.info-box {
+    position: relative;
+    z-index: 1; /* فوق تأثير التعتيم */
+    background: rgba(255, 255, 255, 0.95); /* خلفية شبه شفافة */
+    padding: 20px; /* مسافة داخلية */
+    border-radius: 12px; /* زوايا دائرية */
+    text-align: center; /* توسيط النص */
+    max-width: 380px;    
+    height: 490px; /* ارتفاع ثابت */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* ظل ناعم */
+}
+
+/* زر العودة */
+.back-btn {
+    display: block;              /* ضروري للتمركز */
+    margin: -15px auto 0 auto;    /* فوق: 10px، يمين ويسار: تلقائي */
+    padding: 10px 15px;
+    background-color:  #e91b1b;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    width: auto;                 /* العرض تلقائي حسب المحتوى */
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+/* تأثير عند المرور على الزر */
+.back-btn:hover {
+    background-color: #5b0707; /* تغيير اللون عند التمرير */
+}
+
+/* عنوان */
+h1 {
+    color: #c70815; /* لون العنوان */
+    font-size: 22px; /* حجم الخط */
+    margin-bottom: 10px; /* مسافة تحت العنوان */
+}
+
+/* الفقرة */
+p {
+    font-size: 16px; /* حجم الخط */
+    color: #333; /* لون النص */
+    margin: 5px 0; /* مسافة فوق وتحت */
+}
+
+/* الروابط */
+a {
+    color: #b31111; /* لون الرابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    font-weight: bold; /* جعل الخط سميك */
+}
+
+a:hover {
+    text-decoration: underline; /* إظهار خط عند التمرير */
+}

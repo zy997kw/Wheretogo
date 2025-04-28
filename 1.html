@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where to go?</title>
+  <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS -->
+  <script defer src="script.js"></script> <!-- ربط ملف JavaScript -->
+</head>
+<body>
+
+  <header>
+    <marquee class="ticker">قريباً معرض العطور .. من 22 / 4 إلى 3 / 5 في صالة (8، 7، 6، 5)</marquee>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="search" placeholder="وين تبـي تروح؟">
+    <button id="search-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M10 2a8 8 0 105.293 14.707l5 5a1 1 0 001.414-1.414l-5-5A8 8 0 0010 2z" fill="currentColor"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <section class="filters-container">
+    <button class="filter" data-category="cafe">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M18 8a4 4 0 0 0 0-8H6a2 2 0 0 0-2 2v11a6 6 0 0 0 5 5.91V22H6a1 1 0 1 0 0 2h12a1 1 0 1 0 0-2h-3v-1.09A6 6 0 0 0 18 13V8zm0-6a2 2 0 0 1 0 4h-1V2h1z"/>
+      </svg>
+      كافيهات
+    </button>
+
+    <button class="filter" data-category="restaurant">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M10 2a1 1 0 0 1 1 1v9h1V3a1 1 0 0 1 2 0v9a2 2 0 0 1-2 2v7h-2v-7a2 2 0 0 1-2-2V3a1 1 0 0 1 1-1z"/>
+      </svg>
+      مطاعم
+    </button>
+    <button class="filter" data-category="cinema">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M4 4v16h16V4H4zm2 2h2v2H6V6zm10 0h2v2h-2V6zM6 10h2v2H6v-2zm10 0h2v2h-2v-2zM6 14h2v2H6v-2zm10 0h2v2h-2v-2z"/>
+      </svg>
+      سينما
+    </button>
+    <button class="filter" data-category="shopping">
+      <svg viewBox="0 0 29 24" width="40" height="20" fill="currentColor">
+        <path d="M7 4V2h10v2h5v2H2V4h5zm0 4v14h10V8H7z"/>
+      </svg>
+      مجمعات
+    </button>
+    <button class="filter" data-category="festival">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M12 2C7.03 2 3 6.03 3 11c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9zM8 14H6v-2h2v2zm10 0h-2v-2h2v2z"/>
+      </svg>
+      ألعاب
+    </button>
+    <button class="filter" data-category="event">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M19 3h-1V1h-2v2H8V1H6v2H5a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V5a2 2 0 0 0-2-2zm0 17a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9h14v11z"/>
+      </svg>
+      فعاليات
+    </button>
+  </section>
+
+  <div id="places-list"></div>
+
+  <footer>
+    <p>© 2025 Where to go? - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <button id="reset-btn" style="display: none;">رجوع</button>
+
+</body>
+</html>
